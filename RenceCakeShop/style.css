@@ -1,0 +1,305 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background: #fffdfb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Toggle Button Styles */
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #e26d5c;
+    user-select: none;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Positioned in the upper-right corner */
+}
+
+/* Hover effect for the toggle button */
+.menu-toggle:hover {
+    transform: scale(1.1) rotate(-10deg);
+}
+
+/* Header Styles */
+header {
+    background: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #e26d5c;
+}
+
+/* Navigation Link Styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #e26d5c;
+}
+
+/* Hero Section Styles */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: #fef3ec;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #e26d5c;
+}
+
+.btn {
+    background: #e26d5c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #d95b4c;
+}
+
+/* Section Padding */
+section {
+    padding: 60px 40px;
+}
+
+/* About Section Styles */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-content img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.details {
+    flex: 1;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #e26d5c;
+}
+
+/* Menu Section Styles */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.4s ease;
+    opacity: 0.95;
+}
+
+.item:hover {
+    transform: translateY(-8px);
+    background: #fffdfb;
+    box-shadow: 0 12px 24px rgba(255, 142, 120, 0.3);
+    opacity: 1;
+}
+
+.item img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+
+.item h3,
+.item p,
+.item span {
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.item:hover h3,
+.item:hover p,
+.item:hover span {
+    color: #e26d5c;
+}
+
+/* Footer Styles */
+footer {
+    background: #fff4f1;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #e26d5c;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-grid img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.footer-grid h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #e26d5c;
+}
+
+.footer-grid p,
+.footer-grid a {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-grid p:hover,
+.footer-grid a:hover {
+    color: #e26d5c;
+}
+
+.footer-credit {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* Mobile Styles */
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show nav links when toggle is active */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        max-width: 90%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+        display: none;
+        text-align: center;
+        position: absolute;
+        top: 60px; /* Align items directly below the toggle button */
+        right: 20px;
+        background: #fff; /* Matches the background of the header */
+        width: 200px; /* Set a fixed width */
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
